@@ -26,7 +26,9 @@ class List {
         virtual void sort() = 0;
         virtual void reverse() = 0;
         virtual string name() = 0;
+        virtual Node<T>* getNode(int index ) = 0;
 
+    //}
         ~List() {
             // TODO
         }

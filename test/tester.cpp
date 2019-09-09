@@ -1,7 +1,8 @@
 #include "tester.h"
 
 void Tester::execute() {
-    Collection collections[] = { forward_list, linked_list, circular_list };
+    //Collection collections[] = { forward_list, linked_list, circular_list };
+    Collection collections[] = { forward_list};
     size_t numberOfCollections = sizeof(collections) / sizeof(collections[0]);
 
     for (int i = 0; i < numberOfCollections; i++) {
@@ -78,7 +79,7 @@ void Tester::testList(Collection collection) {
     ASSERT(list->size() == 0, "The " + list->name() + " size or clear is not working");
     ASSERT(list->empty() == true, "The " + list->name() + " empty is not working");
 
-    testSpecifics(collection, list);
+    //testSpecifics(collection, list);
 }
 
 template <typename T>

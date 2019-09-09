@@ -3,74 +3,77 @@
 
 #include "list.h"
 
-template <typename T>
+template<typename T>
 class CircularLinkedList : public List<T> {
-    public:
-        CircularLinkedList() : List<T>() {}
+public:
+    CircularLinkedList() : List<T>() {}
 
-        T front() {
-            // TODO
-        }
+    T front() {
+        // TODO
+    }
 
-        T back() {
-            // TODO
-        }
+    T back() {
+        // TODO
+    }
 
-        void push_front(T value) {
-            // TODO
-        }
+    void push_front(T value) {
+        // TODO
+    }
 
-        void push_back(T value) {
-            // TODO
-        }
+    void push_back(T value) {
+        // TODO
+    }
 
-        void pop_front() {
-            // TODO
-        }
+    void pop_front() {
+        // TODO
+    }
 
-        void pop_back() {
-            // TODO
-        }
+    void pop_back() {
+        // TODO
+    }
 
-        T operator[](int index) {
-            // TODO
-        }
+    T operator[](int index) {
+        // TODO
+    }
 
-        bool empty() {
-            // TODO
-        }
+    bool empty() {
+        // TODO
+    }
 
-        int size() {
-            // TODO
-        }
+    int size() {
+        // TODO
+    }
 
-        void clear() {
-            // TODO
-        }
+    void clear() {
+        // TODO
+    }
 
-        void sort() {
-            // TODO
-        }
-    
-        void reverse() {
-            // TODO
-        }
+    void sort() {
+        // TODO
+    }
 
-        string name() {
-            return "Circular Linked List";
-        }
+    void reverse() {
+        // TODO
+    }
 
-        BidirectionalIterator<T> begin() {
-            // TODO
-        }
+    string name() {
+        return "Circular Linked List";
+    }
 
-	    BidirectionalIterator<T> end() {
-            // TODO
-        }
+    BidirectionalIterator<T> begin() {
+        // TODO
+    }
 
-        void merge(CircularLinkedList<T> list) {
-            // TODO
-        }
+    BidirectionalIterator<T> end() {
+        // TODO
+    }
+
+    void merge(CircularLinkedList<T> list) {
+        // TODO
+    }
+
+    virtual Node<T> *getNode(int index) {
+    }
 };
 
 #endif
