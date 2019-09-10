@@ -36,11 +36,7 @@ public:
             this->head = newNode;
             this->tail = newNode;
         } else {
-            //auto aux = this->head;
             auto aux = this->tail;
-
-            //while(aux->next != nullptr)
-            //    aux = aux->next;
 
             aux->next = newNode;
             this->tail = newNode;
@@ -69,7 +65,7 @@ public:
         } else {
             auto oldTail = this->tail;
 
-            auto newTail = getNode(size()-1-1);
+            auto newTail = this->getNode(size()-1-1);
             newTail->next = nullptr;
             this->tail = newTail;
 
@@ -80,7 +76,7 @@ public:
     }
 
     T operator[](int index) {
-        return getNode(index)->data;
+        return this->getNode(index)->data;
     }
 
     bool empty() {
@@ -141,7 +137,6 @@ public:
     }
 
     void reverse() {
-
         switch (this->nodes) {
             case 1: {} break;
             case 2: {
@@ -194,7 +189,7 @@ public:
         // TODO
     }
 
-    virtual Node<T> *getNode(int index) {
+/*    virtual Node<T> *getNode(int index) {
         int i=1;
         if ( index > this->nodes - 1 )
             throw runtime_error("Index out of lenght");
@@ -211,7 +206,7 @@ public:
             }
         }
         return aux->next;
-    }
+    }*/
 
     void merge(ForwardList<T> list) {
         auto aux = list.head;

@@ -1,8 +1,8 @@
 #include "tester.h"
 
 void Tester::execute() {
-    //Collection collections[] = { forward_list, linked_list, circular_list };
-    Collection collections[] = { forward_list};
+    Collection collections[] = { forward_list, linked_list, circular_list };
+    //Collection collections[] = { linked_list};
     size_t numberOfCollections = sizeof(collections) / sizeof(collections[0]);
 
     for (int i = 0; i < numberOfCollections; i++) {

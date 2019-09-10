@@ -26,7 +26,25 @@ class List {
         virtual void sort() = 0;
         virtual void reverse() = 0;
         virtual string name() = 0;
-        virtual Node<T>* getNode(int index ) = 0;
+
+        Node<T>* getNode(int index ) {
+            int i=1;
+            if ( index > this->nodes - 1 )
+                throw runtime_error("Index out of lenght");
+
+            auto aux = this->head;
+
+            while(aux->next != nullptr && index != 0) {
+
+                if ( i == index) {
+                    break;
+                } else {
+                    aux = aux->next;
+                    i++;
+                }
+            }
+            return aux->next;
+        };
 
     //}
         ~List() {
