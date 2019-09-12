@@ -182,14 +182,28 @@ public:
     }
 
     ForwardIterator<T> begin() {
-        // TODO
+        return ForwardIterator<T>(this->head);
     }
 
     ForwardIterator<T> end() {
-        // TODO
+        return ForwardIterator<T>(this->tail);
     }
 
-/*    virtual Node<T> *getNode(int index) {
+    void merge(ForwardList<T> list) {
+        auto aux = list.head;
+
+        while(aux->next != nullptr) {
+            this->push_back( aux->data );
+            aux = aux->next;
+        }
+
+        if( aux->next == nullptr)
+            this->push_back(aux->data);
+
+        list.clear();
+    }
+
+    Node<T> *getNode(int index) {
         int i=1;
         if ( index > this->nodes - 1 )
             throw runtime_error("Index out of lenght");
@@ -206,22 +220,6 @@ public:
             }
         }
         return aux->next;
-    }*/
-
-    void merge(ForwardList<T> list) {
-        auto aux = list.head;
-
-        //list.head->killSelf();
-
-        while(aux->next != nullptr) {
-            this->push_back( aux->data );
-            aux = aux->next;
-        }
-
-        if( aux->next == nullptr)
-            this->push_back(aux->data);
-
-        list.clear();
     }
 };
 
