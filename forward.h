@@ -26,11 +26,13 @@ public:
 
     void push_front(T value) {
         // TODO
+        // Falta 
     }
 
     void push_back(T value) {
         Node<T> *newNode = new Node<T>();
         newNode->data = value;
+        // Falta settear el next a nullptr
 
         if( this->head == nullptr) {
             this->head = newNode;
@@ -53,6 +55,7 @@ public:
             auto newHeader = oldHeader->next;
             this->head = newHeader;
 
+            // Kill self va a matar el siguiente y anterior, no funciona
             oldHeader->killSelf();
             delete oldHeader;
             this->nodes--;
@@ -88,6 +91,7 @@ public:
     }
 
     void clear() {
+        // esto no va a funcionar
         auto aux = this->head;
         auto aux2 = aux->next;
 
@@ -186,6 +190,7 @@ public:
     }
 
     ForwardIterator<T> end() {
+        // El sigueinte de tail
         return ForwardIterator<T>(this->tail);
     }
 
